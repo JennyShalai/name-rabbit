@@ -66,13 +66,15 @@ func answer(names: [String]) -> [String] {
     let allCosts = Array(nameCostDictionary.keys).sort { $0 > $1 }
     
     
+    // for each cost take a name 
+    // if there are several name - sort them as descending order
     for cost in allCosts {
         let nameArray = nameCostDictionary[cost]
         if nameArray!.count == 1 {
             result.append((nameArray?.first)!)
         } else {
-            let sortedNmaeArray = nameArray!.sort { $0 > $1 }
-            for name in sortedNmaeArray {
+            let sortedNameArray = nameArray!.sort { $0 > $1 }
+            for name in sortedNameArray {
                 result.append(name)
             }
         }
@@ -83,5 +85,6 @@ func answer(names: [String]) -> [String] {
 
 
 print(answer(input))
+// ["bonnie", "bomoie", "liz", "annie", "s"]
 
 
