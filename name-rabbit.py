@@ -50,7 +50,7 @@ def answer(names):
             nameCostDictionary[nameCost] = [name]
             
     # all names' costs + sorted as descending order
-    allCosts = sorted(nameCostDictionary.keys(), key=int, reverse=True)
+    allCosts = sorted(nameCostDictionary.keys(), key = int, reverse = True)
     
     # for each cost take a name
     # if there are several name - sort them as descending order
@@ -59,7 +59,7 @@ def answer(names):
         if len(nameList) == 1:
             result.append(nameList[0])
         else:
-            sortedNameList = sorted(nameList, reverse=True)
+            sortedNameList = sorted(nameList, reverse = True)
             for name in sortedNameList:
                 result.append(name)
 
@@ -69,7 +69,10 @@ input1 = ["annie", "bonnie", "liz"]
 input2 = ["abcdefg", "vi"]
 
 print(answer(input1))
+# ['bonnie', 'liz', 'annie']
+
 print(answer(input2))
+# ['vi', 'abcdefg']
 
 
 
