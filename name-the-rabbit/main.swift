@@ -62,7 +62,7 @@ func answer(names: [String]) -> [String] {
         
     }
     
-    // all names' costs sorted as descending order
+    // all names' costs + sorted as descending order
     let allCosts = Array(nameCostDictionary.keys).sort { $0 > $1 }
     
     
@@ -80,6 +80,7 @@ func answer(names: [String]) -> [String] {
         }
         
     }
+    
     return result
 }
 
